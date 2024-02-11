@@ -1,0 +1,32 @@
+
+.hero{
+    margin-bottom: 16px;
+    h2{
+        font-size: 35px;
+        text-align: center;
+        padding-bottom: 16px;
+        font-family: 'Cinzel', serif;
+    }
+    img{
+        width: 100%;
+        position: relative;
+        padding:2px 3px;
+    }
+    button{
+        cursor:pointer;
+        position:absolute;
+        top:405px;
+        left:50px;
+        border:1px solid  rgb(4, 7, 20);
+        background-color: transparent;
+        color: rgb(4, 7, 20);
+        border-radius: 4px;
+        padding:8px 16px;
+        font-weight: bold;
+        font-size: 20px;
+        &:hover{
+            border-color:silver;
+            background-color: rgba(213, 100, 39, 0.803);
+        }
+    }
+}

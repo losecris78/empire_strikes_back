@@ -1,0 +1,34 @@
+
+.catalog{
+    padding: 4px 3.5vw;
+    
+    &__list{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:4px;
+        list-style: none;
+        &__item{
+            max-width: 330px;
+            &__div{
+                
+                border:2px solid silver;
+                
+                img{
+                    width:100%;
+                    height:90%;
+                    
+                }
+            }
+        }
+        &__series{
+            list-style: none;
+            display: block;
+            img{
+                width:100%;
+                margin:4px auto;
+                padding: 2px;
+            }
+        }
+    }
+
+}
