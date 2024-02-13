@@ -11,14 +11,19 @@
 </head>
 <body>
     <header>
-        <h1 class="header__main"><img src="./source/images/star_wars_lg.png" alt="Star Wars logo"></h1>
+        <h1 class="header__main">
+            <picture>
+                <source media="(max-width:768px)" srcset="./dist/images/star_wars_sm.png">
+                <img src="./source/images/star_wars_lg.png" alt="Star Wars logo"></h1>
+            </picture>
     </header>
     <section>
         <div class="hero">
             <h2>The empire strikes back</h2>
-            <div>
+            <div class="hero__container">
                 <img src="./source/images/empire_strikes_hero.jpg" alt="Empire Strikes Back Poster">
-                <button>Assistir trailer</button>
+                <button id="trailer">Assistir trailer</button>
+                <iframe class="hero__container__iframe" width="560" height="315" src="https://www.youtube.com/embed/JNwNXF9Y6kY?si=ZeR8tTBmMxWk9XWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -29,77 +34,77 @@
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">The Phantom Menace</h4>
                     <img src="./dist/images/the_phantom_menace.jpeg" alt="The phantom menace">
-                    <p>Film year <span>1999</span></p>
+                    <p>Film year <span class="highlight">1999</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">Attack of the clones</h4>
                     <img src="./dist/images/attack_of_the_clones.jpeg" alt="Attack of the clones">
-                    <p>Film year <span>2002</span></p>
+                    <p>Film year <span class="highlight">2002</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">Revenge of the Sith</h4>
                     <img src="./dist/images/revenge_of_the_sith.jpeg" alt="Revenge of the Sith">
-                    <p>Film year <span>2005</span></p>
+                    <p>Film year <span class="highlight">2005</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">A new hope</h4>
                     <img src="./dist/images/a_new_hope.jpeg" alt="A new hope">
-                    <p>Film year <span>1977</span></p>
+                    <p>Film year <span class="highlight">1977</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">The empire strikes back</h4>
                     <img src="./dist/images/the_empire_strikes_back.jpeg" alt="The empire strikes back">
-                    <p>Film year <span>1980</span></p>
+                    <p>Film year <span class="highlight">1980</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">Return of the Jedi</h4>
                     <img src="./dist/images/return_of_the_jedi.jpeg" alt="Return of the Jedi">
-                    <p>Film year <span>1983</span></p>
+                    <p>Film year <span class="highlight">1983</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">The force awakens</h4>
                     <img src="./dist/images/the_force_awakens.jpeg" alt="The force awakens">
-                    <p>Film year <span>2015</span></p>
+                    <p>Film year <span class="highlight">2015</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">Rogue one</h4>
                     <img src="./dist/images/rogue_one.jpeg" alt="Rogue one">
-                    <p>Film year <span>2016</span></p>
+                    <p>Film year <span class="highlight">2016</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">The Last Jedi</h4>
                     <img src="./dist/images/the_last_jedi.jpeg" alt="The last Jedi">
-                    <p>Film year <span>2017</span></p>
+                    <p>Film year <span class="highlight">2017</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">Solo</h4>
                     <img src="./dist/images/solo.jpeg" alt="Solo">
-                    <p>Film year <span>2018</span></p>
+                    <p>Film year <span class="highlight">2018</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
                 <div class="catalog__list__item__div">
                     <h4 class="tittle--small">The rise of Skywalker</h4>
                     <img src="./dist/images/rise_of_skywalker.jpeg" alt="The rise of Skywalker">
-                    <p>Film year <span>2019</span></p>
+                    <p>Film year <span class="highlight">2019</span></p>
                 </div>
             </li>
             <li class="catalog__list__item">
@@ -133,26 +138,151 @@
             </div>
 
             <ul class="characters__display ">
-                <li data-tab-id="vader" class="characters__display__item characters__display__item--is-active"><img src="./dist/images/darth_vader.jpg" alt="Darth Vader"> </li>
-                <li data-tab-id="skywalker" class="characters__display__item"><img src="./dist/images/luke_skywalker.jpg" alt="Luke Skywalker"></li>
-                <li data-tab-id="yoda" class="characters__display__item"><img src="./dist/images/yoda.jpg" alt="Master Yoda"></li>
-                <li data-tab-id="kenobi" class="characters__display__item"><img src="./dist/images/darth_vader.jpg" alt="Obi-Wan Kenobi"></li>
-                <li data-tab-id="leia" class="characters__display__item"><img src="./dist/images/leia.jpg" alt="Princess Leia"></li>
-                <li data-tab-id="solo" class="characters__display__item"><img src="./dist/images/han_solo.jpg" alt="Han Solo"></li>
-                <li data-tab-id="chewbacca" class="characters__display__item"><img src="./dist/images/chewbacca.jpg" alt="Chewbaca"></li>
-                <li data-tab-id="sith" class="characters__display__item"><img src="./dist/images/emperor.jpg" alt="Dark Sith"></li>
-                <li data-tab-id="r2" class="characters__display__item"><img src="./dist/images/r2_d2.jpg" alt="R2-D2"></li>
-            </ul>
+                <li data-tab-id="vader" class="characters__display__item characters__display__item--is-active">
+                <div>
+                    <img src="./dist/images/darth_vader.jpg" alt="Darth Vader"> 
+                    <div>
+                        <ul>
+                             <h4>Darth Vader</h4>
+                            <li>Once heroic Jedi knight</li>
+                            <li>Transformed into a cybernetically-enhanced Sith Lord</li>
+                            <li>Led the Empire erradication of the Jedi Order.</li>
+                        </ul>
+                    </div>
+                </div>
+                </li>
+                        
+                <li data-tab-id="skywalker" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/luke_skywalker.jpg" alt="Luke Skywalker">
+                        <div>
+                            <ul>
+                                <h4>Luke Skywalker</h4>
+                                <li>Tatooine farmboy</li>
+                                <li>Became one of the greatest Jedi</li>
+                                <li>Ended the tyranny of the Sith</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="yoda" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/yoda.jpg" alt="Master Yoda">
+                        <div>
+                            <ul>
+                                <h4>Master Yoda</h4>
+                                <li>Legendary Jedi Master, stronger than most</li>
+                                <li>He trainned Jedi for over 800 years</li>
+                                <li>Unlocked the path to immortality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="kenobi" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/obi-wan-portrait.jpg" alt="Obi-Wan Kenobi">
+                        <div>
+                            <ul>
+                                <h4>Obi-Wan Kenobi</h4>
+                                <li>Legendary Jedi Master</li>
+                                <li>He trained Anakin Skywalker and guided Luke as a menthor.</li>
+                                <li>Served as general in the Republic</li>
+                            </ul>      
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="leia" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/leia.jpg" alt="Princess Leia">
+                        <div>
+                            <ul>
+                                <h4>Princess Leia Organa</h4>
+                                <li>Leader of the Rebel Alliance.</li>
+                                <li>Daughter of Padmé Amidala and Anakin Skywalker.</li>
+                                <li>Brave and resolute, fearless on the battlefield </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="solo" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/han_solo.jpg" alt="Han Solo">
+                        <div>
+                            <ul>
+                                <h4>Han Solo</h4>
+                                <li>Former smuggler.</li>
+                                <li>Captain of the Millenial Falcon.</li>
+                                <li>Joined Luke and Lei in the fight against the Empire.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="chewbacca" class="characters__display__item">
+                <div>
+                    <img src="./dist/images/chewbacca.jpg" alt="Chewbaca">
+                    <div>
+                        <ul>
+                            <h4>Chewbaca</h4>
+                            <li>Legendary Wookiee warrior.</li>
+                            <li>Part of tthe core group who restored freedom to the galaxy.</li>
+                            <li>Has short temper and great accuracy with a bowcaster.</li>
+                        </ul>
+                    </div>
+                </div>
+                </li>
+                <li data-tab-id="sith" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/emperor.jpg" alt="Dark Sith">
+                        <div>
+                            <ul>
+                                <h4>Emperor Palpatine</h4>
+                                <li>Scheming, powerful and evil to the core.</li>
+                                <li>Restored the Sith and destroyed the Jedi Order.</li>
+                                <li>Ruled the galaxy through fear and tyranni.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li data-tab-id="r2" class="characters__display__item">
+                    <div>
+                        <img src="./dist/images/r2_d2.jpg" alt="R2-D2">
+                        <div>
+                            <ul>
+                                <h4>R2-D2</h4>
+                                <li>Reliable and versatile astromech droid.</li>
+                                <li>Served Padmé Amidala, Anakin Skywalker and Luke Skywalker.</li>
+                                <li>Skilled starship mechanic and fighter pilot's assistant.</li>
+                            </ul>
+                        </div>                   
+                    </div>
+                </li>
         </nav>
     </section>
-    <section>
+    <section class="facts">
         <h3 class="tittle">Facts</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum provident, consequatur molestias hic illum
-             adipisci in praesentium cupiditate
-             tempore tenetur facilis ratione ea reprehenderit quos rem aliquam. Obcaecati, doloribus.</p>
+        <p>
+            After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion’s defeat on the ice planet Hoth,
+             Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. 
+             In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.
+            <ul>
+                <li>
+                    Directed by: <span class="highlight">Irvin Kerschner</span>
+                </li>
+                <li>
+                    Music composed by: <span class="highlight">John Williams</span>
+                </li>
+                <li>
+                    Written by <span class="highlight">George Lucas</span>
+                </li>
+                <li>
+                    Release date: <span class="highlight">May 1980</span>
+                </li>
+                <li>Awards: <span class="highlight">Won 2 Academy awards, 2 Grammy awards and a BAFTA</span></li>
+            </ul>
+        </p>
     </section>
     <footer>
-        <p>&copy; 2024 The Walt Disney Comp.
+        <p>&copy; 2024 Lucasfilm.
 
         </p>
     </footer>

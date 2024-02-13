@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', function(){
     
 })
 
+document.getElementById('trailer').addEventListener('click',showTrailer);
+document.getElementById('trailer').addEventListener('dblclick',closeIframe);
+
+function showTrailer() {
+  document.querySelector("iframe").style.display= "block";
+};
+function closeIframe(){
+    document.querySelector("iframe").style.display= "none";
+}
+
 function removeActive(){
     const character = document.querySelectorAll('[data-tab-button]');
 

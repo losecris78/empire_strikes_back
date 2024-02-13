@@ -1,4 +1,4 @@
-
+@use 'variables';
 .hero{
     margin-bottom: 16px;
     h2{
@@ -17,16 +17,34 @@
         position:absolute;
         top:405px;
         left:50px;
-        border:1px solid  rgb(4, 7, 20);
+        border:1px solid  variables.$mainBackColor;
         background-color: transparent;
-        color: rgb(4, 7, 20);
+        color: variables.$mainBackColor;
         border-radius: 4px;
         padding:8px 16px;
         font-weight: bold;
         font-size: 20px;
-        &:hover{
-            border-color:silver;
-            background-color: rgba(213, 100, 39, 0.803);
+        @media(max-width:768px){
+            position:absolute;
+            top:305px;
+            left:50px;
         }
+        &:hover{
+            border-color: variables.$secondBackColor;
+            background-color: variables.$heroColor;
+        }
+    }
+    &__container{
+        &__iframe{
+            display:none;
+            position:absolute;
+            top:405px;
+            left:250px;
+            @media(max-width:768px){
+                position:static;
+                margin-bottom: 20px;
+            }
+        }
+
     }
 }

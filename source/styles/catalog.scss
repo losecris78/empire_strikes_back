@@ -1,17 +1,21 @@
+@use 'variables';
 
 .catalog{
-    padding: 4px 3.5vw;
+    padding: 4px 15%;
     
     &__list{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:4px;
         list-style: none;
+        @media(max-width:768px){
+            display:block;
+        }
         &__item{
             max-width: 330px;
             &__div{
                 
-                border:2px solid silver;
+                border:2px solid variables.$secondBackColor;
                 
                 img{
                     width:100%;
